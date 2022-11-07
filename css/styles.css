@@ -1,1 +1,33 @@
-@import "reset.css"
+@import "reset.css";
+
+:root {
+  --primary: hsl(225, 100%, 94%);
+  --secondary: hsl(245, 75%, 52%);
+  --pale: hsl(225, 100%, 98%);
+  --grey: hsl(224, 23%, 55%);
+  --dark: hsl(223, 47%, 23%);
+
+  --font-normal: 500;
+  --font-semibold: 700;
+  --font-bold: 900;
+}
+
+footer {
+  position: fixed;
+  inset: auto 0 1rem 0;
+  text-align: center;
+}
+
+body {
+  background-color: var(--primary);
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background-color: var(--pale);
+  border-radius: 0.5rem;
+}
