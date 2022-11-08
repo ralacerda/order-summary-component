@@ -21,8 +21,9 @@
 
 footer {
   position: fixed;
-  inset: auto 0 1rem 0;
+  inset: auto 0 var(--space-s) 0;
   text-align: center;
+  font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
 }
 
 body {
