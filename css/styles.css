@@ -1,12 +1,11 @@
-@import "reset.css";
+@import url("reset.css");
 
 :root {
-  --primary: hsl(225, 100%, 94%);
-  --secondary: hsl(245, 75%, 52%);
-  --pale: hsl(225, 100%, 98%);
-  --grey: hsl(224, 23%, 55%);
-  --dark: hsl(223, 47%, 23%);
-
+  --primary: hsl(225deg 100% 94%);
+  --secondary: hsl(245deg 75% 52%);
+  --pale: hsl(225deg 100% 98%);
+  --grey: hsl(224deg 23% 55%);
+  --dark: hsl(223deg 47% 23%);
   --font-normal: 500;
   --font-semibold: 700;
   --font-bold: 900;
