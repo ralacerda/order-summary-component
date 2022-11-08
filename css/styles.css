@@ -1,14 +1,22 @@
 @import url("reset.css");
 
 :root {
-  --primary: hsl(225deg 100% 94%);
-  --secondary: hsl(245deg 75% 52%);
-  --pale: hsl(225deg 100% 98%);
-  --grey: hsl(224deg 23% 55%);
-  --dark: hsl(223deg 47% 23%);
+  --primary: hsl(225 100% 94%);
+  --secondary: hsl(245 75% 52%);
+  --secondary-hover: hsl(245 83% 68%);
+  --pale: hsl(225 100% 98%);
+  --grey: hsl(224 23% 55%);
+  --dark: hsl(223 47% 23%);
   --font-normal: 500;
   --font-semibold: 700;
   --font-bold: 900;
+  --border-radius: 1rem;
+  --space-s: clamp(1rem, calc(0.82rem + 0.75vw), 1.5rem);
+  --space-m: clamp(1.5rem, calc(1.24rem + 1.13vw), 2.25rem);
+  --space-l: clamp(2rem, calc(1.65rem + 1.5vw), 3rem);
+  --space-m-l: clamp(1.5rem, calc(0.97rem + 2.25vw), 3rem);
+
+  font-family: "Red Hat Display", sans-serif;
 }
 
 footer {
@@ -24,9 +32,105 @@ body {
   background-repeat: no-repeat;
   display: grid;
   place-items: center;
+  color: var(--grey);
+  font-weight: var(--font-normal);
+  text-align: center;
 }
 
 main {
+  background-color: white;
+  border-radius: var(--border-radius);
+  width: clamp(20rem, 17.1391rem + 12.2066vw, 28.125rem);
+  box-shadow: 0 0 1rem #00000025;
+}
+
+.card {
+  margin-block: var(--space-l);
+  padding-inline: var(--space-m-l);
+}
+
+.card > * + * {
+  margin-inline: auto;
+}
+
+h1 {
+  color: var(--dark);
+  font-weight: var(--font-bold);
+  font-size: clamp(1.4rem, 1.2768rem + 0.5258vw, 1.75rem);
+  line-height: 1;
+}
+
+button {
+  display: block;
+  font-weight: var(--font-bold);
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-top: var(--space-s);
+}
+
+.hero-image {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.plan {
+  margin-top: var(--space-s);
   background-color: var(--pale);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-s);
+  gap: 1rem;
+}
+
+.plan button {
+  text-decoration: underline;
+  color: var(--secondary);
+  font-size: 0.8rem;
+}
+
+.plan button:hover,
+.plan button:focus-visible {
+  color: var(--secondary-hover);
+}
+
+.plan-info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.plan-info :first-child {
+  font-weight: var(--font-bold);
+  color: var(--dark);
+}
+
+.proceed-button {
+  margin-top: var(--space-m);
+  width: 100%;
+  color: white;
+  background-color: var(--secondary);
+  padding: 0.9rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1rem 0.8rem 1rem hsl(245 75% 52% / 10%);
+}
+
+.proceed-button:hover,
+.proceed-button:focus-visible {
+  background-color: var(--secondary-hover);
+}
+
+.cancel-button {
+  margin-top: var(--space-m);
+  color: var(--grey);
+}
+
+.cancel-button:hover,
+.cancel-button:focus-visible {
+  color: var(--dark);
 }
