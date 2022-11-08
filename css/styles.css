@@ -99,6 +99,7 @@ p {
 .plan button:hover,
 .plan button:focus-visible {
   color: var(--secondary-hover);
+  text-decoration: none;
 }
 
 .plan-info {
